@@ -22,6 +22,6 @@ jobs:
         java-version: '19'
         distribution: 'temurin'
     - name: compilação babilonica
-      run: javac src/Main.java
+      run: javac project2/src/Main.java
     - name: rodada de milhoes
-      run: java src/Main.java
+      run: java project2/src/Main.java
