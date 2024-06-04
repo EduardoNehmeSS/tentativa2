@@ -25,3 +25,16 @@ jobs:
       run: javac project2/src/Main.java
     - name: rodada de milhoes
       run: java project2/src/Main.java
+
+    - name: Docker Build & Push Action
+      uses: mr-smithers-excellent/docker-build-push@v6.4
+      with:
+        # Name of the Docker image
+        image: eduardonehme07/java_sem_maven
+        tags: ${{ steps.version.outputs.version }}
+        # Target Docker registry
+        registry: docker.io 
+        # Location of Dockerfile, if not Dockerfile in root directory
+        dockerfile: dockerfile
+        username: eduardonehme07
+        password: 39218083Edu!!
